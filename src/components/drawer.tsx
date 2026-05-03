@@ -59,6 +59,7 @@ export type DrawerProps<TTag extends ElementType> = Props<
     onSnapPointChange?: (snapPoint: string) => void;
     open?: boolean;
     onOpenChange?: (open: boolean) => void;
+    onOpenChangeComplete?: (open: boolean) => void;
     defaultOpen?: boolean;
     /**
      * The border radius of the drawer.
@@ -100,6 +101,7 @@ export function Drawer<TTag extends ElementType = typeof DEFAULT_DRAWER_TAG>(
     onSnapPointChange: theirOnSnapPointChange,
     open: theirOpen,
     onOpenChange: theirOnOpenChange,
+    onOpenChangeComplete: theirOnOpenChangeComplete,
     defaultOpen,
     borderRadius = 16,
     style,
@@ -187,10 +189,13 @@ export function Drawer<TTag extends ElementType = typeof DEFAULT_DRAWER_TAG>(
         damping: 100,
         stiffness: 1200,
         mass: 1,
-        onComplete,
+        onComplete: () => {
+          onComplete();
+          theirOnOpenChangeComplete?.(false);
+        },
       });
     },
-    [],
+    [theirOnOpenChangeComplete],
   );
 
   const drag = useDrag(
