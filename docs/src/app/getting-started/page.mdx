@@ -1,0 +1,46 @@
+---
+title: Getting Started
+---
+
+import { Callout } from "nextra/components";
+
+# Getting Started
+
+Motion Drawer is a headless drawer with smooth animations and easily integrates with any headless
+libraries such as [Headless UI](https://headlessui.com),
+[React Aria](https://react-spectrum.adobe.com/react-aria/),
+[Radix UI](https://radix-ui.com), and more.
+
+<Callout type='info'>
+  You must install `Motion` library `v12.23.24` or newer into your project as
+  Motion Drawer uses Motion under the hood.
+</Callout>
+
+## Installation
+
+Simply pnpm/npm/yarn install the package.
+
+```bash copy
+pnpm i motion-drawer
+```
+
+## Simple Usage
+
+```jsx copy
+import { Drawer, DrawerHeader, DrawerBody, DrawerActions } from "motion-drawer";
+
+export function MyDrawer() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open Drawer</button>
+      <Drawer open={open} onOpenChange={setOpen}>
+        <DrawerHeader className="select-none">Header</DrawerHeader>
+        <DrawerBody className="select-none">Main content goes here...</DrawerBody>
+        <DrawerActions>Actions</DrawerActions>
+      </Drawer>
+    </>
+  );
+}
+```

@@ -1,0 +1,62 @@
+---
+title: API Reference
+---
+
+# API Reference
+
+What components are available in Motion Drawer and how to use them.
+
+## Anatomy
+
+Import all parts and piece them together.
+
+```jsx copy
+import { Drawer, DrawerHeader, DrawerBody, DrawerActions } from "motion-drawer";
+
+export function MyDrawer() {
+  return (
+    <Drawer>
+      <DrawerHeader className="select-none" />
+      <DrawerBody className="select-none" />
+      <DrawerActions />
+    </Drawer>
+  );
+}
+```
+
+## Components API
+
+### Drawer
+
+| Prop                    | Type                          | Default    | Description                                                          |
+| ----------------------- | ----------------------------- | ---------- | -------------------------------------------------------------------- |
+| as                      | `ElementType`                 | `div`      | The element or component the Drawer should render as.                |
+| snapPoints              | `string[]`                    | `["auto"]` | Array of points the drawer can snap to. Supports all CSS valid sizes |
+| defaultSnapPoint        | `string`                      | -          | Initial snap point when drawer opens.                                |
+| snapPoint               | `string`                      | -          | Controlled snap point state.                                         |
+| onSnapPointChange       | `(snapPoint: string) => void` | -          | Handler called when snap point changes.                              |
+| open                    | `boolean`                     | -          | Controls drawer open/close state.                                    |
+| onOpenChange            | `(open: boolean) => void`     | -          | Handler called when open state changes.                              |
+| defaultOpen             | `boolean`                     | -          | Initial open state.                                                  |
+| borderRadius            | `number \| null`              | `16`       | Border radius in pixels.                                             |
+| offset                  | `number`                      | `0`        | Amount to nudge drawer from origin.                                  |
+| padding                 | `number`                      | `0`        | Space between drawer and window edge.                                |
+| closeFromFirstSnapPoint | `boolean`                     | `false`    | Close the drawer when dragging down from the first snap point.       |
+
+### DrawerHeader
+
+| Prop | Type          | Default | Description                                                 |
+| ---- | ------------- | ------- | ----------------------------------------------------------- |
+| as   | `ElementType` | `div`   | The element or component the DrawerHeader should render as. |
+
+### DrawerBody
+
+| Prop | Type          | Default | Description                                               |
+| ---- | ------------- | ------- | --------------------------------------------------------- |
+| as   | `ElementType` | `div`   | The element or component the DrawerBody should render as. |
+
+### DrawerActions
+
+| Prop | Type          | Default | Description                                                  |
+| ---- | ------------- | ------- | ------------------------------------------------------------ |
+| as   | `ElementType` | `div`   | The element or component the DrawerActions should render as. |

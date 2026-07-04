@@ -1,0 +1,166 @@
+@import 'tailwindcss';
+
+@import 'nextra-theme-docs/style.css';
+
+@variant dark (&:where(.dark *));
+
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        outline: none;
+        border-color: var(--color-border);
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
+.nextra-mobile-nav {
+    @apply bg-bg
+}
+
+@theme {
+    --color-bg: oklch(1 0 0);
+    --color-bg-50: oklch(0.98 0 0);
+    --color-bg-100: oklch(0.96 0 0);
+    --color-bg-200: oklch(0.9 0 0);
+
+    --color-backdrop: oklch(0 0 0 / 0.25);
+
+    --color-fg: oklch(0.3 0 0);
+    --color-fg-hover: oklch(0.15 0 0);
+    --color-fg-muted: oklch(0.45 0 0);
+    --color-fg-disabled: oklch(0.64 0 0);
+
+    --color-fg-inverse: oklch(0.8 0 0);
+    --color-fg-hover-inverse: oklch(0.9 0 0);
+    --color-fg-muted-inverse: oklch(0.55 0 0);
+    --color-fg-disabled-inverse: oklch(0.32 0 0);
+
+    --color-primary: oklch(0.6 0.2 260);
+    --color-primary-50: oklch(0.97 0.05 260);
+    --color-primary-fg: oklch(1 0 0);
+    --color-primary-fg-hover: oklch(1 0 0);
+    --color-primary-fg-muted: oklch(1 0 0);
+    --color-primary-fg-disabled: oklch(1 0 0);
+
+    --color-secondary: oklch(0.95 0 0);
+    --color-secondary-50: oklch(0.45 0 0);
+    --color-secondary-fg: oklch(0.2 0 0);
+    --color-secondary-fg-hover: oklch(0.9 0 0);
+    --color-secondary-fg-muted: oklch(0.45 0 0);
+    --color-secondary-fg-disabled: oklch(0.8 0 0);
+
+    --color-error: oklch(0.66 0.2 25);
+    --color-error-fg: oklch(1 0 0);
+    --color-error-fg-hover: oklch(0.9 0 0);
+    --color-error-fg-muted: oklch(0.65 0.1 25);
+    --color-error-fg-disabled: oklch(0.45 0.05 25);
+
+    --color-warning: oklch(0.7 0.2 70);
+    --color-warning-fg: oklch(1 0 0);
+    --color-warning-fg-hover: oklch(0.9 0 0);
+    --color-warning-fg-muted: oklch(0.45 0 0);
+    --color-warning-fg-disabled: oklch(0.32 0 0);
+
+    --color-success: oklch(0.66 0.2 145);
+    --color-success-50: oklch(0.95 0.05 145);
+    --color-success-fg: oklch(1 0 0);
+    --color-success-fg-hover: oklch(1 0 0);
+    --color-success-fg-muted: oklch(1 0 0);
+    --color-success-fg-disabled: oklch(1 0 0);
+
+    --color-info: oklch(0.6 0.2 220);
+    --color-info-fg: oklch(1 0 0);
+    --color-info-fg-hover: oklch(1 0 0);
+    --color-info-fg-muted: oklch(1 0 0);
+    --color-info-fg-disabled: oklch(1 0 0);
+
+    --color-border: oklch(0.92 0 0);
+
+    --text-2xs: 0.5625rem;
+
+    --animate-caret-blink: caret-blink 1.2s ease-out infinite;
+
+    --shadow-b-when-scroll: var(--shadow-b-when-scroll);
+    --shadow-t-when-scroll: var(--shadow-t-when-scroll);
+    --shadow-t: 0 -2px 6px 0 rgb(0 0 0 / 0.1), 0 -1px 4px -1px rgb(0 0 0 / 0.1);
+
+    @keyframes caret-blink {
+        0%,
+        70%,
+        100% {
+            opacity: 1;
+        }
+        20%,
+        50% {
+            opacity: 0;
+        }
+    }
+}
+
+:root {
+    &:where(.dark, .dark *) {
+        --color-bg: oklch(0.24 0 0);
+        --color-bg-50: oklch(0.226 0 89.876);
+        --color-bg-100: oklch(0.28 0 0);
+        --color-bg-200: oklch(0.3 0 0);
+
+        --color-backdrop: oklch(0 0 0 / 0.5);
+
+        --color-fg: oklch(0.84 0 0);
+        --color-fg-hover: oklch(0.9 0 0);
+        --color-fg-muted: oklch(0.72 0 0);
+        --color-fg-disabled: oklch(0.48 0 0);
+
+        --color-fg-inverse: oklch(0.3 0 0);
+        --color-fg-hover-inverse: oklch(0.15 0 0);
+        --color-fg-muted-inverse: oklch(0.45 0 0);
+        --color-fg-disabled-inverse: oklch(0.64 0 0);
+
+        --color-primary: oklch(0.6 0.2 260);
+        --color-primary-50: oklch(0.21 0.1 260);
+        --color-primary-fg: oklch(1 0 0);
+        --color-primary-fg-hover: oklch(1 0 0);
+        --color-primary-fg-muted: oklch(1 0 0);
+        --color-primary-fg-disabled: oklch(1 0 0);
+
+        --color-secondary: oklch(0.32 0 0);
+        --color-secondary-50: oklch(0.45 0 0);
+        --color-secondary-fg: oklch(1 0 0);
+        --color-secondary-fg-hover: oklch(0.9 0 0);
+        --color-secondary-fg-muted: oklch(0.5 0 0);
+        --color-secondary-fg-disabled: oklch(0.4 0 0);
+
+        --color-error: oklch(0.5 0.2 25);
+        --color-error-fg: oklch(1 0 0);
+        --color-error-fg-hover: oklch(0.9 0 0);
+        --color-error-fg-muted: oklch(0.45 0 0);
+        --color-error-fg-disabled: oklch(0.32 0 0);
+
+        --color-warning: oklch(0.7 0.2 70);
+        --color-warning-fg: oklch(1 0 0);
+        --color-warning-fg-hover: oklch(0.9 0 0);
+        --color-warning-fg-muted: oklch(0.45 0 0);
+        --color-warning-fg-disabled: oklch(0.32 0 0);
+
+        --color-success: oklch(0.5 0.2 145);
+        --color-success-50: oklch(0.05 0.1 145);
+        --color-success-fg: oklch(1 0 0);
+        --color-success-fg-hover: oklch(0.9 0 0);
+        --color-success-fg-muted: oklch(0.45 0 0);
+        --color-success-fg-disabled: oklch(0.32 0 0);
+
+        --color-info: oklch(0.6 0.2 220);
+        --color-info-fg: oklch(1 0 0);
+        --color-info-fg-hover: oklch(0.9 0 0);
+        --color-info-fg-muted: oklch(0.45 0 0);
+        --color-info-fg-disabled: oklch(0.32 0 0);
+
+        --color-border: oklch(0.3 0 0);
+    }
+}

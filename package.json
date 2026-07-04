@@ -37,10 +37,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mohammadhosseinmoradi/motion-drawer.git"
+    "url": "https://github.com/rsdev64/motion-drawer.git"
   },
   "bugs": {
-    "url": "https://github.com/mohammadhosseinmoradi/motion-drawer/issues"
+    "url": "https://github.com/rsdev64/motion-drawer/issues"
   },
   "devDependencies": {
     "@types/node": "24.4.0",
