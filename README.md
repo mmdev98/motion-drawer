@@ -7,7 +7,7 @@ libraries such as [Headless UI](https://headlessui.com),
 
 ## Documentation
 
-Visit [https://motion-drawer.vercel.app](https://motion-drawer.vercel.app) to view the full documentation.
+Visit [https://rsdev64.github.io/motion-drawer](https://rsdev64.github.io/motion-drawer) to view the full documentation.
 
 ## Getting Started
 
