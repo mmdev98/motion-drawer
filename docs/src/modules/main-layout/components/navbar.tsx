@@ -3,7 +3,7 @@ import { Navbar as NextraNavbar } from "nextra-theme-docs";
 export function Navbar() {
   return (
     <NextraNavbar
-      projectLink="https://github.com/rsdev64/motion-drawer"
+      projectLink="https://github.com/mmdev98/motion-drawer"
       projectIcon={
         <svg
           fill="currentColor"

@@ -6,8 +6,8 @@ export function Footer() {
     <NextraFooter>
       <p className="text-center w-full text-sm">
         Made with ❤️ by{" "}
-        <Link href="https://mohammadhosseinmoradi.dev" target="_blank">
-          Mohammad Hossein Moradi
+        <Link href="https://mmdev98.github.io" target="_blank">
+          Mohammad Moradi
         </Link>
       </p>
     </NextraFooter>
